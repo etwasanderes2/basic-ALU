@@ -3,7 +3,6 @@ Simulates the ALU we used as an Example in CompSys. Not clean, not pretty, not e
 
 It's a java project that simulates the ALU.
 Data is saved using boolean arrays.
-
 Initializes register all 0.
 (16 words, 8 bit by default, hardcoded constant at Start.java (-> Issues))
 Prints complete register after execution.
