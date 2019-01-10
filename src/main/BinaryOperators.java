@@ -31,7 +31,10 @@ public abstract class BinaryOperators {
 		Result result = new Result(resultData);
 		result.setCarry(carry);
 
-		// TODO: Over/Underflow
+		boolean safetyBit = fullAdder(op0[op0.length - 1], op1[op1.length - 1], carry)[0];
+
+		result.setUnderflow(safetyBit && !resultData[resultData.length - 1]);
+		result.setOverflow(!safetyBit && resultData[resultData.length - 1]);
 
 		return result;
 	}
